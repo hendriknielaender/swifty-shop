@@ -17,7 +17,7 @@
     "db:push": "turbo db:push db:generate --skip-infer",
     "db:studio": "bun -F db studio",
     "dev": "FORCE_COLOR=1 turbo dev --parallel --skip-infer",
-    "dev:web": "turbo dev --skip-infer --parallel --filter !@acme/db",
+    "dev:web": "turbo dev --skip-infer --parallel --filter !@acme/db !@acme/stripe",
     "format": "turbo format --skip-infer --continue -- --cache --cache-location='node_modules/.cache/.prettiercache' --ignore-path='../../.gitignore'",
     "format:fix": "turbo format --skip-infer --continue -- --write --cache --cache-location='node_modules/.cache/.prettiercache' --ignore-path='../../.gitignore'",
     "lint": "turbo lint --skip-infer --continue -- --cache --cache-location 'node_modules/.cache/.eslintcache' && manypkg check",

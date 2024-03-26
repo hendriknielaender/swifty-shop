@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 const Checkout = props => (
-  <div>
+  <div style={{ border: "1px solid yellow" }}>
     <Head>
       <title>checkout</title>
       <link rel="icon" href="/favicon.ico" />

@@ -5,7 +5,7 @@ const ExportredTitle = () => {
     console.log('HOOKS WORKS');
   }, []);
   return (
-    <div className="hero">
+    <div style={{ border: "1px solid yellow" }} className="hero">
       <h1 className="title">
         {' '}
         This came fom <code>checkout</code> !!!

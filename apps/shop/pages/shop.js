@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 const Shop = props => (
-  <div>
+  <div style={{ border: "1px solid green" }}>
     <Head>
       <title>Shop</title>
       <link rel="icon" href="/favicon.ico" />

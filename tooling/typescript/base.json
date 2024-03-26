@@ -16,9 +16,7 @@
     "incremental": true,
     "noUncheckedIndexedAccess": true,
     "types": ["bun-types"],
-    "moduleResolution": "bundler",
     "noEmit": true,
-    "allowImportingTsExtensions": true,
     "moduleDetection": "force",
   },
   "exclude": ["node_modules", "build", "dist", ".next", ".expo"]

@@ -3,6 +3,7 @@ import React from 'react';
 import { of, tap } from 'rxjs';
 import './App.css';
 import Counter from './components/Counter';
+import { SiteFooter } from './components/footer';
 
 export default () => {
 	const Remote = React.lazy(
@@ -44,6 +45,7 @@ export default () => {
 			<React.Suspense fallback='loading...'>
 				<Remote />
 			</React.Suspense>
+			<SiteFooter />
 		</>
 	);
 };

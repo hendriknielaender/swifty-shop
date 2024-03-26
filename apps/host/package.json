@@ -3,16 +3,21 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "bun --bun vite --port 4173",
+    "dev": "bun --bun vite --open --port 4173",
     "build": "tsc && vite build",
     "preview": "npm run build && vite preview --port 4173"
   },
   "dependencies": {
+    "@acme/ui": "link:@acme/ui",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
+    "@acme/eslint-config": "link:@acme/eslint-config",
+    "@acme/prettier-config": "link:@acme/prettier-config",
+    "@acme/tailwind-config": "link:@acme/tailwind-config",
+    "@acme/tsconfig": "link:@acme/tsconfig",
     "@module-federation/vite": "0.2.8",
     "@softarc/native-federation": "2.0.4",
     "@softarc/native-federation-esbuild": "2.0.4",
@@ -22,5 +27,14 @@
     "typescript": "4.9.4",
     "vite-tsconfig-paths": "4.3.2",
     "vite": "4.5.2"
-  }
+  },
+  "eslintConfig": {
+  "root": true,
+  "extends": [
+    "@acme/eslint-config/base",
+    "@acme/eslint-config/nextjs",
+    "@acme/eslint-config/react"
+   ]
+  },
+  "prettier": "@acme/prettier-config"
 }

@@ -11,6 +11,7 @@ export default defineConfig(async ({ command }) => ({
 			allow: ['.', '../shared'],
 		},
 	},
+
 	build: {
 		rollupOptions: {
 			external: ["react", "react-dom"],

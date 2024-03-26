@@ -1,3 +1,3 @@
-import { createFederatedCatchAll } from 'nextjs-shared-v14';
+import { createFederatedCatchAll } from '@acme/nextjs-shared-v14';
 
 export default createFederatedCatchAll(['checkout', 'home']);

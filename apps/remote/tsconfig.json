@@ -24,7 +24,7 @@
       "shared": [
         "../shared/shared.ts"
       ]
-    },
+    }
   },
   "include": [
     "src"

@@ -31,11 +31,12 @@
   "dependencies": {
     "@acme/ui": "workspace:*",
     "@heroicons/react": "2.0.18",
+    "@module-federation/runtime": "0.0.13",
+    "jotai": "2.6.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "6.15.0",
-    "jotai": "2.6.4",
-    "@module-federation/runtime": "0.0.13"
+    "react-wrap-balancer": "^1.1.0"
   },
   "eslintConfig": {
     "root": true,

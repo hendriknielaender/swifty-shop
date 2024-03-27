@@ -9,8 +9,13 @@ init({
 	name: "host",
 	remotes: [
 		{
-			name: "products",
+			name: "app2",
 			entry: "http://localhost:4001/remoteEntry.js",
+			alias: "app2",
+		},
+		{
+			name: "products",
+			entry: "http://localhost:4002/remoteEntry.js",
 			alias: "products",
 		},
 	],

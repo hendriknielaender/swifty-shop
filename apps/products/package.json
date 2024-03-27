@@ -1,0 +1,27 @@
+{
+	"name": "products",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "rspack serve",
+		"build": "rspack"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@rspack/cli": "0.5.4",
+		"@rspack/core": "0.5.4",
+		"@rspack/plugin-react-refresh": "^0.5.4",
+		"@types/react": "18.2.21",
+		"@types/react-dom": "18.2.7",
+		"react-refresh": "^0.14.0",
+		"typescript": "5.2.2",
+		"typescript-plugin-css-modules": "5.0.1"
+	},
+	"dependencies": {
+		"@heroicons/react": "2.1.1",
+		"jotai": "2.6.4",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-router-dom": "6.15.0",
+		"@module-federation/runtime": "0.0.13"
+	}
+}

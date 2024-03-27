@@ -1,13 +1,19 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { Home } from "./features/Home";
-import { lazy, Suspense } from "react";
+import React, { lazy, Suspense, ComponentType } from "react";
 import { Navbar } from "./features/Navbar";
 import { init } from "@module-federation/runtime";
 import { SiteFooter } from "./components/footer";
 import { MainNav } from "./components/main-nav";
+import { loadRemote } from "@module-federation/runtime";
 
 const Products = lazy(() => import("./features/Products/components/Products"));
 const Cart = lazy(() => import("./features/Cart/components/Cart"));
+
+const Product = React.lazy(() => {
+	const promise = loadRemote("products/Product");
+	return promise as Promise<{ default: ComponentType<any> }>;
+});
 
 import * as Icons from "@acme/ui/icons";
 import { siteConfig } from "./config";
@@ -39,6 +45,14 @@ const router = createBrowserRouter([
 				element: (
 					<Suspense>
 						<Products />
+					</Suspense>
+				),
+			},
+			{
+				path: "/product",
+				element: (
+					<Suspense>
+						<Product />
 					</Suspense>
 				),
 			},

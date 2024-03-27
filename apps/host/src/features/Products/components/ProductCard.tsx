@@ -15,20 +15,22 @@ const ProductCard = ({ product, children }: ProductCardProps) => {
 	};
 
 	return (
-		<div className={styles["product-card"]}>
-			<h3>{product.title}</h3>
-			<img
-				src={product.imgUrl}
-				alt={product.title}
-				className={styles["product-card__image"]}
-			/>
-			<div className={styles["product-card__details"]}>
-				<p className={styles["product-card__details__price"]}>
-					{formatAsCurrency(product.price)}
-				</p>
-				{children}
+		<a href={"/product"}>
+			<div className={styles["product-card"]}>
+				<h3>{product.title}</h3>
+				<img
+					src={product.imgUrl}
+					alt={product.title}
+					className={styles["product-card__image"]}
+				/>
+				<div className={styles["product-card__details"]}>
+					<p className={styles["product-card__details__price"]}>
+						{formatAsCurrency(product.price)}
+					</p>
+					{children as any}
+				</div>
 			</div>
-		</div>
+		</a>
 	);
 };
 

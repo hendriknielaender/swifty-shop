@@ -5,10 +5,10 @@ import { ComponentType, Suspense } from "react";
 import React from "react";
 import { loadRemote } from "@module-federation/runtime";
 
-const ProductHero = React.lazy(() => {
-	const promise = loadRemote("products/ProductHero");
-	return promise as Promise<{ default: ComponentType<any> }>;
-});
+// const ProductHero = React.lazy(() => {
+// 	const promise = loadRemote("products/ProductHero");
+// 	return promise as Promise<{ default: ComponentType<any> }>;
+// });
 
 const bodyElement = document.querySelector("body")!;
 import { siteConfig } from "../../../config";
@@ -25,7 +25,7 @@ const Home = () => {
 
 	return (
 		<>
-			<main className="flex min-h-screen w-full flex-col items-center justify-center pt-48">
+			<main className="flex min-h-screen w-full flex-col items-center justify-center">
 				<div className="z-10 min-h-[50vh] w-full max-w-4xl px-5 xl:px-0">
 					{/* <a
           href="https://twitter.com/steventey/status/1613928948915920896"
@@ -42,16 +42,18 @@ const Home = () => {
 						className="animate-fade-up bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-center text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm md:text-7xl/[5rem]"
 						style={{ animationDelay: "0.20s", animationFillMode: "forwards" }}
 					>
-						<Balancer>Your all-in-one, enterprise ready starting point</Balancer>
+						<Balancer>
+							Your all-in-one<br />
+							e-commerce shop built with batteries included.</Balancer>
+
 					</h1>
 					<p
 						className="mt-6 animate-fade-up text-center text-muted-foreground/80 opacity-0 md:text-xl"
 						style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
 					>
 						<Balancer>
-							Acme Corp is a Next.js starter kit that includes everything you need
-							to build a modern web application. Mobile application preconfigured,
-							ready to go.
+							Swifty Shop is a rspack module federation starter kit that includes everything you need
+							to build a modern web application.
 						</Balancer>
 					</p>
 					<div
@@ -69,10 +71,6 @@ const Home = () => {
 						</a>
 					</div>
 				</div>
-				<section className={styles["home"]}>
-					<ProductsOnSale />
-				</section>
-
 			</main>
 
 		</>

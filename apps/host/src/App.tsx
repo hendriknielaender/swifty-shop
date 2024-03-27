@@ -20,14 +20,8 @@ const router = createBrowserRouter([
 			<>
 				<div className="flex min-h-screen flex-col">
 					<nav className="container z-50 flex h-16 items-center border-b bg-background">
-						<div className="mr-8 hidden items-center md:flex">
-							<Icons.Logo className="mr-2 h-6 w-6" />
-							<span className="text-lg font-bold tracking-tight">
-								{siteConfig.name}
-							</span>
-						</div>
 						<MobileDropdown />
-						<MainNav />
+						<MainNav items={siteConfig.mainNav} />
 					</nav>
 
 					<main className="flex-1"><Outlet /></main>

@@ -3,6 +3,9 @@ import styles from "./Navbar.module.css";
 import { SunIcon, MoonIcon } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
 
+import { cn } from "@acme/ui";
+import { buttonVariants } from "@acme/ui/button";
+
 type Theme = "light" | "dark";
 
 const getColorScheme = () =>
@@ -55,6 +58,14 @@ const Navbar = () => {
 			<div className={styles["nav-bar_links"]}>
 				<Link to="/products">Products</Link>
 				<Link to="/cart">Cart</Link>
+				<a
+					className={cn(buttonVariants({ variant: "default" }))}
+					href={"/404"}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<span>Star on GitHub</span>
+				</a>
 			</div>
 			<div className={styles["nav-bar_theme"]}>{InactiveThemeIcon()}</div>
 		</div>

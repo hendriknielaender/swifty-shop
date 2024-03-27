@@ -49,7 +49,8 @@ const config = defineConfig({
 				type: "asset/source",
 			},
 			{
-				test: /\.css$/i,
+				test: /\.css$/,
+				use: ["postcss-loader"],
 				type: "css",
 			},
 			{

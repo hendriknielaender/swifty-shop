@@ -1,0 +1,28 @@
+.product-search {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    .product-search__wrapper {
+        min-width: 256px;
+
+        .product-search__wrapper__input {
+            padding: 0.25rem;
+            border-radius: 0.25rem;
+            font-size: 1.2rem;
+            border-color: var(--color-text);
+            background-color: var(--color-background);
+        }
+
+        .product-search__wrapper__input:focus {
+            outline: none;
+        }
+
+        .product-search__wrapper__icon {
+            padding: 10px;
+            width: 1.2rem;
+            position: absolute;
+            margin-left: -35px;
+        }
+    }
+}

@@ -1,11 +1,6 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
+import { createRoot } from "react-dom/client";
 
-const remoteElement = document.getElementById('root') as unknown as HTMLElement;
-const remote = createRoot(remoteElement);
-remote.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
+const appElement = document.getElementById("app");
+
+const root = createRoot(appElement!);
+root.render(<div>This is app2</div>);

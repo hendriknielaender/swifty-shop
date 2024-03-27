@@ -1,11 +1,20 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import { init } from "@module-federation/runtime";
 
-const hostElement = document.getElementById('root') as unknown as HTMLElement;
-const host = createRoot(hostElement);
-host.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
+const appElement = document.getElementById("app");
+
+init({
+	name: "host",
+	remotes: [
+		{
+			name: "products",
+			entry: "http://localhost:4001/remoteEntry.js",
+			alias: "products",
+		},
+	],
+});
+
+const root = createRoot(appElement!);
+root.render(<App />);

@@ -21,5 +21,9 @@
     "allowImportingTsExtensions": true,
     "moduleDetection": "force",
   },
-  "exclude": ["node_modules", "build", "dist", ".next", ".expo"]
+  "exclude": ["node_modules", "build", "dist", ".next", ".expo"],
+  "plugins": [{ "name": "typescript-plugin-css-modules" }],
+  "paths": {
+    "products/*": ["../../apps/app2/src/features/Products/components/*"]
+   }
 }

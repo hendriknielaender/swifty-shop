@@ -29,6 +29,7 @@
     "@turbo/gen": "^1.13.0",
     "bun-types": "^1.0.35",
     "prettier": "^3.2.5",
+    "sst": "ion",
     "turbo": "^1.13.0",
     "typescript": "^5.4.3"
   },

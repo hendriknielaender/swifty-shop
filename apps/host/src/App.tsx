@@ -11,6 +11,7 @@ const Cart = lazy(() => import("./features/Cart/components/Cart"));
 
 import * as Icons from "@acme/ui/icons";
 import { siteConfig } from "./config";
+import { MobileDropdown } from "./components/mobile-nav";
 
 const router = createBrowserRouter([
 	{
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
 								{siteConfig.name}
 							</span>
 						</div>
+						<MobileDropdown />
 						<MainNav />
 					</nav>
 

@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "scripts": {
     "clean": "git clean -xdf .turbo node_modules",
+    "build": "tsc -p tsconfig.json",
     "format": "prettier --check \"**/*.{ts,tsx}\"",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
@@ -11,7 +12,7 @@
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.3",
     "@radix-ui/react-checkbox": "^1.0.4",
-    "@radix-ui/react-dialog": "^1.0.4",
+    "@radix-ui/react-dialog": "1.0.4",
     "@radix-ui/react-dropdown-menu": "^2.0.5",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-popover": "^1.0.6",

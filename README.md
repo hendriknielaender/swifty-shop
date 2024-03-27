@@ -3,7 +3,26 @@
 <p align="center" width="100%">
     <img width="75%" src="swifty-shop.png">
 </p>
-# Deployment to Production
+
+## Getting started
+
+Install:
+```sh
+cd tooling
+# repeat for every package
+bun link
+cd ../packages/ui
+bun link
+
+bun install
+```
+
+Start dev env:
+```sh
+bun dev
+```
+
+## Deployment to Production
 
 **Note:** Below is an outline of how the application could be deployed to a production environment if it were production-ready:
 
